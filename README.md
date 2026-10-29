@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +52,7 @@ footer{padding:35px 5%;background:#21103e;color:white}.foot{max-width:1200px;mar
 </div></div></section>
 <div class="cta"><div class="panel"><div><h2>Let your child's brilliance shine.</h2><p>Contact Precious Academy to ask about school sections, admissions, fees, and visiting the school.</p></div><a class="btn orange" href="#contact">Make an Enquiry →</a></div></div>
 <section id="contact"><div class="container"><div class="head"><span class="tag">Get in touch</span><h2>We look forward to hearing from you</h2><p>Contact Precious Academy for more information about our learning programmes and admissions.</p></div><div class="contactgrid">
-<div class="info"><h3>Contact the Academy</h3><div class="line"><b>📍 School Address</b><span>No. 11 Prestige Samuel Street</span></div><div class="line"><b>🏫 School Sections</b><span>Elementary, Primary and Secondary</span></div><div class="line"><b>📞 Phone</b><span>Add the official school phone number</span></div><div class="line"><b>✉️ Email</b><span>Add the official school email address</span></div><p class="note">Add the town/city and state to complete the address before publishing.</p></div>
+<div class="info"><h3>Contact the Academy</h3><div class="line"><b>📍 School Address</b><span>No. 11 Prestige Samuel Street</span></div><div class="line"><b>🏫 School Sections</b><span>Elementary, Primary and Secondary</span></div><div class="line"><b>📞 Phone</b><span><a href="tel:08036926453">08036926453</a></span></div><div class="line"><b>✉️ Email</b><span><a href="mailto:preciousacademy@gmail.com">preciousacademy@gmail.com</a></span></div><p class="note">Add the town/city and state to complete the address before publishing.</p></div>
 <form id="enquiryForm"><div class="row"><div><label for="parent">Parent/Guardian Name</label><input id="parent" required placeholder="Enter your full name"></div><div><label for="phone">Phone Number</label><input id="phone" type="tel" required placeholder="Enter phone number"></div></div><label for="level">School Section</label><select id="level" required><option value="">Select a section</option><option>Elementary</option><option>Primary</option><option>Secondary</option></select><label for="message">Your Enquiry</label><textarea id="message" required placeholder="How can Precious Academy help you?"></textarea><button class="btn purple" type="submit">Prepare Enquiry ↗</button><p class="note">This demo downloads the enquiry as a text file. It does not send or store information online.</p></form>
 </div></div></section>
 </main>
@@ -69,3 +68,4 @@ const form=document.getElementById('enquiryForm'),toast=document.getElementById(
 form.addEventListener('submit',event=>{event.preventDefault();const data=['PRECIOUS ACADEMY — ADMISSION ENQUIRY','Motto: Where Every Child Meets Their Brilliance','',`Parent/Guardian: ${document.getElementById('parent').value.trim()}`,`Phone: ${document.getElementById('phone').value.trim()}`,`School section: ${document.getElementById('level').value}`,`Enquiry: ${document.getElementById('message').value.trim()}`].join('\n');const blob=new Blob([data],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='precious-academy-enquiry.txt';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);toast.textContent='Your enquiry has been prepared as a text file. Thank you for contacting Precious Academy!';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),4500);form.reset();});
 </script>
 </body></html>
+
